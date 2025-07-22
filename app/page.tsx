@@ -8,14 +8,24 @@ import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <main className="bg-neutral-50" >
+    <main className="bg-neutral-50 scroll-smooth transition-all ease-in-out delay-200" >
       <NavBar />
-      <Hero />
-      <Features />
-      <Downloads />
-      <Faq />
-      <Newsletter />
-      <Footer />
+      <section>
+        <Hero />
+      </section>
+      <section>
+        <Features />
+      </section>
+      <section>
+        <Downloads />
+      </section>
+      <section>
+        <Faq />
+      </section>
+      <section>
+        <Newsletter />
+        <Footer />
+      </section>
     </main>
   );
 }

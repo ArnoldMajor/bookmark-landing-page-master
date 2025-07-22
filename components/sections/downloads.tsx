@@ -5,7 +5,7 @@ import Button from "../button";
 export default function Downloads() {
     const cardMargin = ['translate-y-0', 'translate-y-10', 'translate-y-20']
     return (
-        <section className="px-40 2xl:px-80 pb-60 pt-10">
+        <div className="px-40 2xl:px-80 pb-60 pt-10">
             {DownloadsCopy.map((item, index) => (
                 <div key={index}>
                     <div className="flex flex-col items-center justify-center text-center">
@@ -48,6 +48,6 @@ export default function Downloads() {
                     </div>
                 ))}
             </div>
-        </section>
+        </div>
     )
 }

@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export default function Hero() {
     return (
-        <section className="px-40 2xl:px-80">
+        <div className="px-40 2xl:px-80">
             {HeroCopy.map((item, index) => (
                 <div key={index} className="grid grid-cols-2 pt-30 pb-40 items-center">
                     <div className="flex flex-col pr-20">
@@ -29,6 +29,6 @@ export default function Hero() {
                     </div>
                 </div>
             ))}
-        </section>
+        </div>
     )
 }

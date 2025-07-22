@@ -3,7 +3,7 @@ import FeaturesSlider from "../features-slider";
 
 export default function Features() {
     return (
-        <section className="px-40 2xl:px-80 pb-60">
+        <div className="px-40 2xl:px-80 pb-60 h-screen">
             {FeaturesCopy.map((item, index) => (
                 <div key={index}>
                     <div className="flex flex-col items-center justify-center text-center">
@@ -14,7 +14,7 @@ export default function Features() {
                 </div>
             ))}
             <FeaturesSlider />
-        </section>
+        </div>
     )
 }
 

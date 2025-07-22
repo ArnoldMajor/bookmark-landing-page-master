@@ -4,7 +4,7 @@ import Button from "../button"
 
 export default function Faq() {
     return (
-        <section className="flex flex-col px-40 2xl:px-80 pb-30 items-center">
+        <div className="flex flex-col px-40 2xl:px-80 pb-30 items-center">
             {FaqCopy.map((item, index) => (
                 <div key={index}>
                     <div className="flex flex-col items-center justify-center text-center">
@@ -23,6 +23,6 @@ export default function Faq() {
                 textColorHover="hover:text-blue-600"
 
             />
-        </section>
+        </div>
     )
 }

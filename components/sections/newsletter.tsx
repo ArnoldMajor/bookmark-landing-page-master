@@ -4,7 +4,7 @@ import Button from "../button"
 
 export default function Newsletter() {
     return (
-        <section className="px-40 2xl:px-80 py-15 bg-blue-600">
+        <div className="px-40 2xl:px-80 py-15 bg-blue-600">
             {newsletterCopy.map((item, index) => (
                 <div key={index} className="text-center flex flex-col items-center justify-center">
                     <p className="mb-8 not-odd:text-sm tracking-widest uppercase text-neutral-50 font-medium ">
@@ -36,6 +36,6 @@ export default function Newsletter() {
                     </div>
                 </div>
             ))}
-        </section>
+        </div>
     )
 }
