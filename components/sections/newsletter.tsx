@@ -23,7 +23,7 @@ export default function Newsletter() {
                                 py-3.5 px-5 text-sm placeholder:text-neutral-400 border-2
                                 border-neutral-50 focus:outline-none focus:border-red-400 
                                 " />
-                            <button >
+                            <div >
                                 <Button
                                     btnLabel="Contact Us"
                                     btnColor="bg-red-400"
@@ -31,7 +31,7 @@ export default function Newsletter() {
                                     btnBorderHover="hover:border-red-400"
                                     textColorHover="hover:text-red-400"
                                     btnClasses="font-medium" />
-                            </button>
+                            </div>
                         </Form>
                     </div>
                 </div>

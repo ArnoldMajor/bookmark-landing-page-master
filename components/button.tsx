@@ -7,14 +7,15 @@ export default function Button({
     textColor = 'text-neutral-50',
     btnBorder = 'border-black',
     btnColor = "bg-black",
+    btnHover = "hover:bg-neutral-50",
     textColorHover = 'hover:text-black',
     btnBorderHover = 'hover:border-black' }) {
     return (
         <Link href="#">
             <button
                 className={`${btnClasses} flex shadow-lg shadow-blue-600/10 justify-center items-center py-3 px-10 
-                ${textColor} ${btnColor} cursor-pointer rounded-md 
-                ${btnBorder} border-2 hover:bg-neutral-50 
+                ${textColor} ${btnColor} cursor-pointer rounded-md
+                ${btnBorder} border-2 ${btnHover} 
                 ${textColorHover} ${btnBorderHover}`}>
                 {btnLabel}
             </button>
