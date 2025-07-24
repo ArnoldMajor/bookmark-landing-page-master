@@ -5,14 +5,14 @@ import LogoWhiteText from "./Logowhitetext"
 
 export default function Footer() {
     return (
-        <div className="sticky top-0 px-40 2xl:px-80 bg-blue-950 py-8 flex items-center justify-between z-9999">
-            <div className="flex flex-row">
-                <div className="mr-20">
+        <div className="sticky top-0 px-40 2xl:px-80 bg-blue-950 py-12 flex flex-col lg:flex-row items-start justify-center lg:justify-between z-9999">
+            <div className="flex flex-col lg:flex-row ">
+                <div className="lg:mr-20 flex justify-center mb-12">
                     <LogoWhiteText />
                 </div>
-                <div className="flex flex-row items-center gap-x-10">
+                <div className="flex flex-row items-center justify-center mb-12 gap-x-10">
                     <div>
-                        <ul className="flex gap-10 list-none uppercase">
+                        <ul className="flex flex-col lg:flex-row gap-10 list-none uppercase text-center">
                             {NavLinks.map((item, index) => (
                                 <li key={index}>
                                     <Link href="#" className="text-neutral-50 hover:text-red-400">

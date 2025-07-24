@@ -6,7 +6,7 @@ export default function Accordion() {
     const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
 
     return (
-        <div className="w-full px-65 mb-20">
+        <div className="w-full px-5 xl:px-50  mb-20">
             {FaqAccordion.map((item, index) => (
                 <div key={index} className="border-t-1 last:border-b-1 py-6 border-neutral-400 ">
                     <div onClick={() => setActiveAccordion(index === activeAccordion ? null : index)} className="cursor-pointer flex flex-row items-center justify-between">

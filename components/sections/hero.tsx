@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export default function Hero() {
     return (
-        <div className="px-40 2xl:px-80 pt-35">
+        <div className="px-5 sm:px-20 xl:px-40 2xl:px-80 pt-35">
             {HeroCopy.map((item, index) => (
                 <div key={index} className="grid grid-cols-2 pt-30 pb-40 items-center">
                     <div className="flex flex-col pr-20">
