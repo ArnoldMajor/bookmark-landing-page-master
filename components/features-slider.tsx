@@ -36,9 +36,14 @@ export default function FeaturesSlider() {
                                         alt={cardItem.title}
                                         width={imageWidth}
                                         height={imageHeight}
-                                        className="absolute scale-90 2xl:scale-110 z-10"
+                                        className={`absolute ${activeMenuItem === 'Simple Bookmarking' ? 'scale-90' : '-bottom-70 scale-80'}
+                                              2xl:scale-110 z-10`}
                                     />
-                                    <div className="absolute z-5 -ml-10 -bottom-68 left-0 xl:-bottom-25 h-55 xl:h-75 w-80 bg-blue-600 rounded-r-full" />
+                                    <div
+                                        className="absolute z-5 w-300 bg-blue-600 rounded-r-full
+                                        -bottom-68 xl:-bottom-25 
+                                        -left-220 
+                                        h-55 xl:h-75 " />
                                 </div>
                                 <div className="flex-1 flex-col scale-lg:px-20 text-center items-center justify-center pr-0 mt-15">
                                     <h2 className="font-semibold text-2xl sm:text-4xl text-blue-950 mb-8">{cardItem.title}</h2>
