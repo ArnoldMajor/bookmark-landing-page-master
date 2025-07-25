@@ -5,26 +5,26 @@ import Image from "next/image"
 
 export default function Hero() {
     return (
-        <div className="px-5 sm:px-20 xl:px-40 2xl:px-80 pt-35">
+        <div className="px-5 sm:px-20 xl:px-40 2xl:px-80 pt-25 sm:pt-35">
             {HeroCopy.map((item, index) => (
-                <div key={index} className="grid grid-cols-2 pt-30 pb-40 items-center">
-                    <div className="flex flex-col pr-20">
-                        <h1 className="font-bold text-5xl text-blue-950 mb-8">{item.heading}</h1>
+                <div key={index} className="flex flex-col-reverse pb-40 items-center">
+                    <div className="flex-1 flex-col sm:pr-20 text-center items-center justify-center">
+                        <h1 className="font-bold text-3xl sm:text-5xl text-blue-950 mb-8">{item.heading}</h1>
                         <p className="text-lg text-neutral-500 mb-8">{item.paragraph}</p>
                         <div className="flex flex-row space-x-6">
-                            <Button btnClasses="font-medium" btnColor="bg-blue-600" btnBorder="border-blue-600" btnBorderHover="hover:border-blue-600" textColorHover="hover:text-blue-600" btnLabel={item.btnPrimary} />
-                            <Button btnClasses="font-medium" btnColor="bg-neutral-100" textColor="text-blue-950" btnBorder="border-neutral-100" btnBorderHover="hover:border-blue-950" btnLabel={item.btnSecondary} />
+                            <Button paddingX="px-4" btnClasses="font-medium" btnColor="bg-blue-600" btnBorder="border-blue-600" btnBorderHover="hover:border-blue-600" textColorHover="hover:text-blue-600" btnLabel={item.btnPrimary} />
+                            <Button paddingX="px-4" btnClasses="font-medium" btnColor="bg-neutral-100" textColor="text-blue-950" btnBorder="border-neutral-100" btnBorderHover="hover:border-blue-950" btnLabel={item.btnSecondary} />
                         </div>
                     </div>
-                    <div className=" flex justify-end overflow-visible">
+                    <div className="flex-1 overflow-visible relative mb-30 pb-50 w-100">
                         <Image
-                            src={item.image}
-                            alt="Hero-image"
+                            src={'/illustration-hero.svg'}
+                            alt={'Hero-image'}
                             width={500}
                             height={300}
-                            className="scale-130 z-200"
+                            className="absolute scale-100  2xl:scale-110 z-10"
                         />
-                        <div className="absolute z-10 bottom-70 h-75 w-140 right-0 bg-blue-600 rounded-l-full">
+                        <div className="absolute z-5 -bottom-20 w-80 right-0 xl:-bottom-25 h-55 xl:h-75 bg-blue-600 rounded-l-full">
                         </div>
                     </div>
                 </div>

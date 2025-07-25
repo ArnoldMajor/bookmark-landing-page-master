@@ -12,11 +12,13 @@ export default function FeaturesSlider() {
 
     return (
         <div>
-            <ul className="px-5 lg:px-40 flex flex-row justify-center list-none mb-20">
+            <ul className="px-5 lg:px-40 flex flex-col justify-center list-none mb-20 2xl:mb-30">
                 {FeaturesMenu.map((menuItem, index) => (
-                    <li key={index} className={`flex-1 text-center text-lg py-4 text-neutral-500 font-medium
-                                                ${activeMenuItem === menuItem ? 'border-b-4 border-red-400' : 'border-b-1 border-neutral-300'}`}>
-                        <button onClick={() => setActiveMenuItem(menuItem)} className="cursor-pointer">
+                    <li key={index} className={`flex-1 first:border-t-1 text-center text-lg text-neutral-500 font-medium border-b-1 border-neutral-300
+                                                ${activeMenuItem === menuItem ? 'sm:border-b-4 sm:border-red-400' : ''}`}>
+                        <button onClick={() => setActiveMenuItem(menuItem)}
+                            className={`cursor-pointer py-4 w-52
+                            ${activeMenuItem === menuItem ? 'border-b-4 border-red-400 sm:border-b-0 sm:border-none' : ''}`}>
                             {menuItem}
                         </button>
                     </li>
@@ -24,21 +26,21 @@ export default function FeaturesSlider() {
             </ul>
             <div>
                 {FeaturesCard.map((cardItem, index) => (
-                    <div key={index} className="flex flex-col lg:flex-row">
+                    <div key={index} className="flex flex-col sm:flex-row lg:flex-row">
                         {activeMenuItem === cardItem.menuItem ?
                             <>
-                                <div className={`flex ${activeMenuItem === 'Simple Bookmarking' ? 'justify-start' : 'justify-center'} flex-1 overflow-visible relative xl:mr-70`}>
+                                <div className={`flex ${activeMenuItem === 'Simple Bookmarking' ? 'justify-start' : 'justify-center'} flex-1 overflow-visible relative xl:mr-50 sm:mb-0 mb-80`}>
                                     <Image
                                         key={cardItem.menuItem}
                                         src={cardItem.img}
                                         alt={cardItem.title}
                                         width={imageWidth}
                                         height={imageHeight}
-                                        className="absolute lg:scale-80 xl:scale-100 z-10"
+                                        className="absolute scale-90 2xl:scale-110 z-10"
                                     />
-                                    <div className="absolute z-5 -bottom-25 h-65 xl:h-75 w-200 -left-100 bg-blue-600 rounded-r-full" />
+                                    <div className="absolute z-5 -ml-10 -bottom-68 left-0 xl:-bottom-25 h-55 xl:h-75 w-80 bg-blue-600 rounded-r-full" />
                                 </div>
-                                <div className="flex-1 flex-col scale-lg:px-20 justify-center pr-0 mt-15">
+                                <div className="flex-1 flex-col scale-lg:px-20 text-center items-center justify-center pr-0 mt-15">
                                     <h2 className="font-semibold text-2xl sm:text-4xl text-blue-950 mb-8">{cardItem.title}</h2>
                                     <p className="text-lg sm:text-xl text-neutral-500 mb-8">{cardItem.paragraph}</p>
                                     <div className="hidden lg:flex">

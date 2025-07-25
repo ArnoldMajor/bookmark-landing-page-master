@@ -18,7 +18,7 @@ export default function NavBar() {
         <div className="flex flex-col fixed top-0 w-full z-9999">
             <div className={`px-5 sm:px-20 xl:px-40 2xl:px-80 lg:bg-neutral-50
         ${menuActive === false ? 'bg-neutral-50' : 'bg-blue-950/97'} 
-        py-10 flex items-center justify-between `}>
+         py-5 sm:py-10 flex items-center justify-between `}>
                 <div>
 
                     <div className={`${menuActive ? 'hidden' : 'block'} lg:block`}>

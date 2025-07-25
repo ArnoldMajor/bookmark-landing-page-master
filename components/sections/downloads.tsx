@@ -14,10 +14,10 @@ export default function Downloads() {
                     </div>
                 </div>
             ))}
-            <div className="px-8 flex flex-col sm:flex-row justify-center sm:space-x-10 space-y-10 sm:space-y-0">
+            <div className="flex flex-col sm:flex-row sm:space-x-10 space-y-10 sm:space-y-0 justify-center items-center">
                 {DownloadsCards.map((cardItem, index) => (
-                    <div key={index} className={`${cardMargin[index]} bg-neutral-50 overflow-hidden flex flex-col shadow-xl shadow-blue-600/15 py-5 px-5 rounded-xl items-center text-center`}>
-                        <div className="flex items-center aspect-[1/1] max-h-24 mb-5">
+                    <div key={index} className={`${cardMargin[index]} bg-neutral-50 overflow-hidden flex flex-col shadow-xl shadow-blue-600/15 py-5 px-5 max-w-68 rounded-xl items-center text-center`}>
+                        <div className="flex items-center aspect-[1/1] max-h-24  mb-5">
                             <Image
                                 src={cardItem.icon}
                                 alt={cardItem.title}

@@ -5,7 +5,7 @@ import LogoWhiteText from "./Logowhitetext"
 
 export default function Footer() {
     return (
-        <div className="sticky top-0 px-40 2xl:px-80 bg-blue-950 py-12 flex flex-col lg:flex-row items-start justify-center lg:justify-between z-9999">
+        <div className="sticky top-0 px-40 2xl:px-80 bg-blue-950 py-12 flex flex-col lg:flex-row items-center justify-center lg:justify-between z-9999">
             <div className="flex flex-col lg:flex-row ">
                 <div className="lg:mr-20 flex justify-center mb-12">
                     <LogoWhiteText />
@@ -24,7 +24,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-row gap-4">
+            <div className="flex justify-center items-center flex-row gap-4">
                 <a href="#">
                     <Image
                         src="/icons/icon-facebook.svg"
