@@ -19,7 +19,7 @@ export default function NavBar() {
             <div className={`px-5 sm:px-20 xl:px-40 2xl:px-80 lg:bg-neutral-50
         ${menuActive === false ? 'bg-neutral-50' : 'bg-blue-950/97'} 
          py-5 sm:py-8 flex items-center justify-between `}>
-                <div>
+                <div className="2xl:scale-150">
 
                     <div className={`${menuActive ? 'hidden' : 'block'} lg:block`}>
                         <LogoColored />
@@ -29,9 +29,9 @@ export default function NavBar() {
                         <LogoWhiteFull />
                     </div>
                 </div>
-                <div className="hidden lg:flex flex-row items-center gap-x-10">
+                <div className="hidden lg:flex flex-row items-center gap-x-10 2xl:gap-x-20">
                     <div>
-                        <ul className="flex gap-10 list-none uppercase">
+                        <ul className="flex gap-10 2xl:gap-20 2xl:text-2xl list-none uppercase">
                             {NavLinks.map((item, index) => (
                                 <li key={index}>
                                     <Link href="#" className="hover:text-red-400">
@@ -42,7 +42,7 @@ export default function NavBar() {
                         </ul>
                     </div>
                     <div>
-                        <Button btnClasses="uppercase" btnLabel="Login" btnColor="bg-red-400" btnBorder="border-red-400" textColorHover="hover:text-red-400" btnBorderHover="hover:border-red-400" />
+                        <Button btnClasses="uppercase 2xl:text-2xl" btnLabel="Login" btnColor="bg-red-400" btnBorder="border-red-400" textColorHover="hover:text-red-400" btnBorderHover="hover:border-red-400" />
                     </div>
                 </div>
                 <button

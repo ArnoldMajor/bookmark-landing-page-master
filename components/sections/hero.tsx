@@ -5,15 +5,15 @@ import Image from "next/image"
 
 export default function Hero() {
     return (
-        <div className="px-5 sm:px-20 xl:px-40 2xl:px-80 pt-25 sm:pt-35 md:pt-50 xl:pt-65">
+        <div className="px-5 sm:px-20 xl:px-40 2xl:px-80 pt-25 sm:pt-35 md:pt-50 xl:pt-65 2xl:pt-80">
             {HeroCopy.map((item, index) => (
-                <div key={index} className="flex flex-col-reverse lg:flex-row pb-40 items-center">
-                    <div className="flex-1 flex-col text-center lg:text-left items-center justify-center xl:pr-15">
-                        <h1 className="font-bold text-3xl sm:text-5xl lg:text-4xl xl:text-5xl text-blue-950 mb-8">{item.heading}</h1>
-                        <p className="text-lg text-neutral-500 mb-8">{item.paragraph}</p>
+                <div key={index} className="flex flex-col-reverse lg:flex-row pb-40 2xl:pb-80 items-center">
+                    <div className="flex-1 flex-col text-center lg:text-left items-center justify-center xl:pr-15 2xl:pr-60">
+                        <h1 className="font-bold text-3xl sm:text-5xl lg:text-4xl xl:text-5xl 2xl:text-7xl text-blue-950 mb-8 2xl:mb-16">{item.heading}</h1>
+                        <p className="text-lg 2xl:text-3xl text-neutral-500 mb-8 2xl:mb-16">{item.paragraph}</p>
                         <div className="flex flex-row space-x-6 justify-center lg:justify-start">
-                            <Button paddingX="px-4" btnClasses="font-medium" btnColor="bg-blue-600" btnBorder="border-blue-600" btnBorderHover="hover:border-blue-600" textColorHover="hover:text-blue-600" btnLabel={item.btnPrimary} />
-                            <Button paddingX="px-4" btnClasses="font-medium" btnColor="bg-neutral-100" textColor="text-blue-950" btnBorder="border-neutral-100" btnBorderHover="hover:border-blue-950" btnLabel={item.btnSecondary} />
+                            <Button paddingX="px-4 2xl:px-10" btnClasses="font-medium 2xl:text-2xl" btnColor="bg-blue-600" btnBorder="border-blue-600" btnBorderHover="hover:border-blue-600" textColorHover="hover:text-blue-600" btnLabel={item.btnPrimary} />
+                            <Button paddingX="px-4 2xl:px-10" btnClasses="font-medium 2xl:text-2xl" btnColor="bg-neutral-100" textColor="text-blue-950" btnBorder="border-neutral-100" btnBorderHover="hover:border-blue-950" btnLabel={item.btnSecondary} />
                         </div>
                     </div>
                     <div className="flex-1 overflow-visible relative pb-50 xl:pb-0 w-100
@@ -23,13 +23,14 @@ export default function Hero() {
                             alt={'Hero-image'}
                             width={500}
                             height={300}
-                            className="absolute z-10
-                            scale-100 sm:scale-120 lg:scale-100 xl:scale-120 xl:-bottom-60"
+                            className="absolute z-10 2xl:ml-40
+                            scale-100 sm:scale-120 lg:scale-100 xl:scale-120 2xl:scale-190
+                            xl:-bottom-60"
                         />
                         <div className="absolute z-5 w-300 bg-blue-600 rounded-l-full
-                        -bottom-20 sm:-bottom-30 xl:-bottom-75 
-                        -right-220 xl:-right-200
-                        h-55 sm:h-65 xl:h-75 ">
+                        -bottom-20 sm:-bottom-30 xl:-bottom-75 2xl:-bottom-100
+                        -right-220 xl:-right-200 2xl:-right-135 
+                        h-55 sm:h-65 xl:h-75 2xl:h-85 ">
                         </div>
                     </div>
                 </div>

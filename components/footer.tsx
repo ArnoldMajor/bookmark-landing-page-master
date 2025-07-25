@@ -5,14 +5,14 @@ import LogoWhiteText from "./Logowhitetext"
 
 export default function Footer() {
     return (
-        <div className="sticky top-0 px-40 2xl:px-80 bg-blue-950 py-12 flex flex-col lg:flex-row items-center justify-center lg:justify-between">
+        <div className="sticky top-0 px-40 2xl:px-80 bg-blue-950 py-12 flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between">
             <div className="flex flex-col lg:flex-row ">
-                <div className="lg:mr-20 flex justify-center mb-12">
+                <div className="lg:mr-20 2xl:mr-40 flex justify-center items-center mb-12 2xl:scale-150">
                     <LogoWhiteText />
                 </div>
                 <div className="flex flex-row items-center justify-center mb-12 gap-x-10">
                     <div>
-                        <ul className="flex flex-col lg:flex-row gap-10 list-none uppercase text-center">
+                        <ul className="flex flex-col lg:flex-row gap-10 2xl:gap-20 2xl:text-2xl list-none uppercase text-center">
                             {NavLinks.map((item, index) => (
                                 <li key={index}>
                                     <Link href="#" className="text-neutral-50 hover:text-red-400">
@@ -24,7 +24,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-center items-center flex-row gap-4">
+            <div className="flex justify-center items-center flex-row gap-4 2xl:scale-150">
                 <a href="#">
                     <Image
                         src="/icons/icon-facebook.svg"
