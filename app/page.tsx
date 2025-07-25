@@ -8,7 +8,7 @@ import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <main className="bg-neutral-50 scroll-smooth transition-all ease-in-out delay-200" >
+    <main className="bg-neutral-50 scroll-smooth transition-all ease-in-out delay-200 overflow-x-hidden" >
       <NavBar />
       <section>
         <Hero />

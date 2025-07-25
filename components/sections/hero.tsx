@@ -24,7 +24,7 @@ export default function Hero() {
                             height={300}
                             className="absolute scale-100  2xl:scale-110 z-10"
                         />
-                        <div className="absolute z-5 -bottom-20 w-80 right-0 xl:-bottom-25 h-55 xl:h-75 bg-blue-600 rounded-l-full">
+                        <div className="absolute z-5 -bottom-20 w-90 right-0 -mr-10 xl:-bottom-25 h-55 xl:h-75 bg-blue-600 rounded-l-full">
                         </div>
                     </div>
                 </div>
