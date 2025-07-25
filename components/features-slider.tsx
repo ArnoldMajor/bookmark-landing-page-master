@@ -12,12 +12,12 @@ export default function FeaturesSlider() {
 
     return (
         <div>
-            <ul className="px-5 lg:px-40 flex flex-col justify-center list-none mb-20 2xl:mb-30">
+            <ul className="px-5 lg:px-40 flex flex-col lg:flex-row justify-center list-none mb-20 2xl:mb-30">
                 {FeaturesMenu.map((menuItem, index) => (
-                    <li key={index} className={`flex-1 first:border-t-1 text-center text-lg text-neutral-500 font-medium border-b-1 border-neutral-300
+                    <li key={index} className={`flex-1 first:border-t-1 lg:first:border-t-0 text-center text-lg text-neutral-500 font-medium border-b-1 border-neutral-300
                                                 ${activeMenuItem === menuItem ? 'xl:border-b-4 xl:border-red-400' : ''}`}>
                         <button onClick={() => setActiveMenuItem(menuItem)}
-                            className={`cursor-pointer py-4 w-52
+                            className={`cursor-pointer py-4 w-52 lg:w-64
                             ${activeMenuItem === menuItem ? 'border-b-4 border-red-400 xl:border-b-0 xl:border-none' : ''}`}>
                             {menuItem}
                         </button>
@@ -37,7 +37,9 @@ export default function FeaturesSlider() {
                                         alt={cardItem.title}
                                         width={imageWidth}
                                         height={imageHeight}
-                                        className={`absolute ${activeMenuItem === 'Simple Bookmarking' ? 'scale-90 sm:-bottom-65 sm:scale-80' : '-bottom-70 scale-80'}
+                                        className={`absolute ${activeMenuItem === 'Simple Bookmarking'
+                                            ? 'scale-90 sm:scale-80 lg:scale-110 sm:-bottom-65 lg:-bottom-50'
+                                            : '-bottom-70 lg:-bottom-60 scale-80 lg:scale-100'}
                                               2xl:scale-110 z-10`}
                                     />
                                     <div
@@ -46,8 +48,9 @@ export default function FeaturesSlider() {
                                         -left-220 
                                         h-55 xl:h-75 " />
                                 </div>
-                                <div className="flex-1 flex-col scale-lg:px-20 text-center items-center justify-center pr-0 mt-15">
-                                    <h2 className="font-semibold text-2xl sm:text-4xl text-blue-950 mb-8">{cardItem.title}</h2>
+                                <div className="flex-1 flex-col lg:pl-20 items-center justify-center
+                                text-center lg:text-left pr-0 mt-15 lg:mt-20">
+                                    <h2 className="font-semibold text-2xl sm:text-4xl lg:text-3xl text-blue-950 mb-8">{cardItem.title}</h2>
                                     <p className="text-lg sm:text-xl text-neutral-500 mb-8">{cardItem.paragraph}</p>
                                     <div className="hidden lg:flex">
                                         <Button
