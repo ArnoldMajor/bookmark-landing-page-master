@@ -31,7 +31,7 @@ export default function NavBar() {
                 </div>
                 <div className="hidden lg:flex flex-row items-center gap-x-10 2xl:gap-x-20">
                     <div>
-                        <ul className="flex gap-10 2xl:gap-20 2xl:text-2xl list-none uppercase">
+                        <ul className="flex gap-10 2xl:gap-20 2xl:text-xl list-none uppercase">
                             {NavLinks.map((item, index) => (
                                 <li key={index}>
                                     <Link href="#" className="hover:text-red-400">

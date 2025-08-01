@@ -20,18 +20,18 @@ export default function Newsletter() {
                                 placeholder="Enter your email address"
                                 className="bg-neutral-50 rounded-md
                                 text-blue-950 pr-15 sm:w-auto w-80
-                                py-3.5 px-5 text-sm 2xl:text-2xl placeholder:text-neutral-400 border-2
+                                py-3 px-5 text-sm 2xl:text-xl placeholder:text-neutral-400 border-2
                                 border-neutral-50 focus:outline-none focus:border-red-400 
                                 " />
                             <div >
                                 <Button
-                                    paddingX="2xl:px-15"
+                                    paddingX="2xl:px-15 px-4"
                                     btnLabel="Contact Us"
                                     btnColor="bg-red-400"
                                     btnBorder="border-red-400"
                                     btnBorderHover="hover:border-red-400"
                                     textColorHover="hover:text-red-400"
-                                    btnClasses="font-medium 2xl:text-3xl sm:w-auto w-80" />
+                                    btnClasses="font-medium 2xl:text-xl sm:w-auto w-80" />
                             </div>
                         </Form>
                     </div>
