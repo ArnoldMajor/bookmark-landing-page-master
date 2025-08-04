@@ -1,6 +1,9 @@
+'use client'
+
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 const rubik = Rubik({
   variable: "--font-rubik",
@@ -8,9 +11,9 @@ const rubik = Rubik({
   weight: ['400', '500']
 });
 
-export const metadata: Metadata = {
-  title: "Frontend Mentor | Bookmark landing page",
-};
+// export const metadata: Metadata = {
+//   title: "Frontend Mentor | Bookmark landing page",
+// };
 
 export default function RootLayout({
   children,
@@ -23,6 +26,7 @@ export default function RootLayout({
         className={`${rubik.className} antialiased`}
       >
         {children}
+        <Toaster position="top-center" reverseOrder={false} />
       </body>
     </html>
   );

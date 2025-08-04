@@ -13,14 +13,12 @@ export default function Button({
     textColorHover = 'hover:text-black',
     btnBorderHover = 'hover:border-black' }) {
     return (
-        <Link href="#">
-            <button
-                className={`${btnClasses} flex shadow-lg shadow-blue-600/10 justify-center items-center ${paddingY} ${paddingX} 
+        <button
+            className={`${btnClasses} flex shadow-lg shadow-blue-600/10 justify-center items-center ${paddingY} ${paddingX} 
                 ${textColor} ${btnColor} cursor-pointer rounded-md
                 ${btnBorder} border-2 ${btnHover} 
                 ${textColorHover} ${btnBorderHover}`}>
-                {btnLabel}
-            </button>
-        </Link>
+            {btnLabel}
+        </button>
     )
 }

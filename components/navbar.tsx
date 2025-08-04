@@ -42,7 +42,9 @@ export default function NavBar() {
                         </ul>
                     </div>
                     <div>
-                        <Button btnClasses="uppercase 2xl:text-2xl" btnLabel="Login" btnColor="bg-red-400" btnBorder="border-red-400" textColorHover="hover:text-red-400" btnBorderHover="hover:border-red-400" />
+                        <Link href="/sign-in">
+                            <Button btnClasses="uppercase 2xl:text-2xl" btnLabel="Login" btnColor="bg-red-400" btnBorder="border-red-400" textColorHover="hover:text-red-400" btnBorderHover="hover:border-red-400" />
+                        </Link>
                     </div>
                 </div>
                 <button
