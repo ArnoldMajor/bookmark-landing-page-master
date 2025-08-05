@@ -1,13 +1,10 @@
 'use client'
 
 import { useState } from "react"
-import { createClient } from "@/utils/supabase/auth-client"
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 
 export default function SignUpUser() {
-    const router = useRouter()
-    const supabase = createClient();
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -18,17 +15,6 @@ export default function SignUpUser() {
         if (!emailRegex.test(email)) {
             toast.error("❌ Invalid Email Format");
             return
-        }
-
-        const { error } = await supabase.auth.signUp({ email, password });
-        if (error) {
-            toast.error(error.message);
-        } else {
-            toast.success("✅ Check your email to confirm signup.");
-
-            setTimeout(() => {
-                router.push("/sign-in");
-            }, 2000);
         }
     }
 

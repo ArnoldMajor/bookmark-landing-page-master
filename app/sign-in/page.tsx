@@ -1,14 +1,10 @@
 'use client'
 
-import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import Image from "next/image"
 import { useState } from "react";
-import { createClient } from "@/utils/supabase/auth-client";
 
 export default function SignInUser() {
-    const supabase = createClient();
-    const router = useRouter();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -21,18 +17,6 @@ export default function SignInUser() {
             return;
         }
 
-        const { error } = await supabase.auth.signInWithPassword({ email, password });
-
-        if (error) {
-            toast.error(error.message);
-        } else {
-            toast.success("✅ Logged in successfully!");
-
-
-            setTimeout(() => {
-                router.push("/users");
-            }, 500);
-        }
     };
 
     return (<section className="bg-white">
