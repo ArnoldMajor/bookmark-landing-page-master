@@ -21,7 +21,9 @@ export default function MobileMenu() {
                         ))}
                     </ul>
                     <div className="flex justify-center mt-8">
-                        <Button btnClasses="uppercase w-80" btnLabel="Login" btnColor="bg-none" btnHover="bg-none" btnBorder="border-neutral-50" textColorHover="hover:text-red-400" btnBorderHover="hover:border-red-400" />
+                        <Link href="/sign-in">
+                            <Button btnClasses="uppercase w-80" btnLabel="Login" btnColor="bg-none" btnHover="bg-none" btnBorder="border-neutral-50" textColorHover="hover:text-red-400" btnBorderHover="hover:border-red-400" />
+                        </Link>
                     </div>
                 </div>
                 <div className="flex justify-center items-center flex-row gap-4">
